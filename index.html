@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface">
+  <meta name="keywords" content="ViTaMIn, Visuo-Tactile, Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViTaMIn: Learning Contact-Rich Tasks Through Robot-Free Visuo-Tactile Manipulation Interface</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <!-- <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span style="color: #4285F4;">Vi</span><span style="color: #EA4335;">Ta</span><span style="color: #FBBC05;">M</span><span style="color: #34A853;">In</span>: Learning Contact-Rich Tasks Through Robot-Free <span style="color: #4285F4;">Vi</span>suo-<span style="color: #EA4335;">Ta</span>ctile <span style="color: #FBBC05;">M</span>anipulation <span style="color: #34A853;">In</span>terface</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://fangchenliu.github.io/">Fangchen Liu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://chuanyune.github.io/">Chuanyu Li</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://qinyh10300.github.io/">Yihua Qin</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <!-- <a href="http://sofienbouaziz.com">Ankit Shaw</a><sup>1</sup>, -->
+              <a>Ankit Shaw</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://me.tsinghua.edu.cn/info/1101/2688.htm">Jing Xu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://callmeray.github.io/homepage/">Rui Chen</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>University of California, Berkeley</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="----"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="----"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="----"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <!-- <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2> -->
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Tactile information plays a crucial role for humans and robots to interact effectively with their environment, particularly for tasks requiring the understanding of contact properties. Solving such dexterous manipulation tasks often relies on imitation learning from demonstration datasets, which are typically collected via teleoperation systems and often demand substantial time and effort. To address these challenges, we present <b>ViTaMIn</b>, an embodiment-free manipulation interface that seamlessly integrates visual and tactile sensing into a hand-held gripper, enabling data collection without the need for teleoperation. Our design employs a compliant Fin Ray gripper with tactile sensing, allowing operators to perceive force feedback during manipulation for more intuitive operation. Additionally, we propose a multimodal representation learning strategy to obtain pre-trained tactile representations, improving data efficiency and policy robustness. Experiments on five contact-rich manipulation tasks demonstrate that <b>ViTaMIn</b> significantly outperforms baseline methods, demonstrating its effectiveness for complex manipulation tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Task Demos -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Task Demonstrations</h2>
+      </div>
+    </div>
+
+    <div class="columns is-multiline">
+      <!-- Task 1 -->
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4"> Orange placement</h3>
+          <video id="task1" autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/orange.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!-- Task 2 -->
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Test Tube Reorientation</h3>
+          <video id="task2" autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/tube.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!-- Task 3 -->
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Scissor Hanging</h3>
+          <video id="task3" autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/scissor.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!-- Task 4 -->
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Sponge Insertion</h3>
+          <video id="task4" autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/sponge.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!-- Task 5 -->
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Articulated object manipulation</h3>
+          <video id="task5" autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/articulated.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!-- Task 6 -->
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Peg Insertion</h3>
+          <video id="task6" autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/task6.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!-- Task 7 -->
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Knife Pulling</h3>
+          <video id="task7" autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/knife.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Generalization</h3>
+          <video id="task8" autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/knife.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Task Success Rate</h3>
+          <img src="./static/images/success_rate.png" alt="Task Success Rate Chart">
+        </div>
+      </div>
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Learning Curve</h3>
+          <img src="./static/images/learning_curve.png" alt="Learning Curve Chart">
+        </div>
+      </div>
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Comparison with Baselines</h3>
+          <img src="./static/images/baseline_comparison.png" alt="Baseline Comparison Chart">
+        </div>
+      </div>
+      <div class="column is-6">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Ablation Study</h3>
+          <img src="./static/images/ablation_study.png" alt="Ablation Study Chart">
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Hardware Details -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Hardware Details</h2>
+        <div class="content has-text-justified">
+          <p>
+            For those interested in building their own ViTaMIn interface, we provide the following resources:
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-multiline">
+      <!-- Component List -->
+      <div class="column is-4">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Component List</h3>
+          <p>
+            Complete list of hardware components and their specifications
+          </p>
+          <a href="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID" class="button is-medium is-link">
+            <span class="icon">
+              <i class="fas fa-list-ul"></i>
+            </span>
+            <span>View List</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Assembly Guide -->
+      <div class="column is-4">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Assembly Guide</h3>
+          <p>
+            Step-by-step video tutorial for assembling the interface
+          </p>
+          <a href="https://www.youtube.com/watch?v=YOUR_ASSEMBLY_VIDEO_ID" class="button is-medium is-danger">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>Coming Soon</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sensor Tutorial -->
+      <div class="column is-4">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Sensor Tutorial</h3>
+          <p>
+            Detailed guide for fabricating the tactile sensors
+          </p>
+          <a href="https://www.youtube.com/watch?v=YOUR_SENSOR_VIDEO_ID" class="button is-medium is-danger">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>Coming Soon</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
