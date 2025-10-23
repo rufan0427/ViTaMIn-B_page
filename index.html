@@ -11,6 +11,7 @@ Robot-Free Visuo-Tactile Manipulation Interface">
 Robot-Free Visuo-Tactile Manipulation Interface</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google Analytics 将id替换为自己的google analytics账户，可以追踪访问网站的用户数据，如数量，地区等等-->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -90,7 +91,8 @@ Robot-Free Visuo-Tactile Manipulation Interface</title>
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><span style="color: #4285F4;">Vi</span><span style="color: #EA4335;">Ta</span><span style="color: #FBBC05;">M</span><span style="color: #34A853;">In</span>: Learning Contact-Rich Tasks Through Robot-Free <span style="color: #4285F4;">Vi</span>suo-<span style="color: #EA4335;">Ta</span>ctile <span style="color: #FBBC05;">M</span>anipulation <span style="color: #34A853;">In</span>terface</h1>
+          <h1 class="title is-1 publication-title"><span style="color: #4285F4;">Vi</span><span style="color: #EA4335;">Ta</span><span style="color: #FBBC05;">M</span><span style="color: #34A853;">In</span>-B: Learning Bi-Manual Contact-Rich Tasks Through
+Robot-Free <span style="color: #4285F4;">Vi</span>suo-<span style="color: #EA4335;">Ta</span>ctile <span style="color: #FBBC05;">M</span>anipulation <span style="color: #34A853;">In</span>terface</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://fangchenliu.github.io/">Fangchen Liu*</a><sup>2</sup>,</span>
@@ -128,7 +130,7 @@ Robot-Free Visuo-Tactile Manipulation Interface</title>
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>Paper(coming soon)</span>
                 </a>
               </span>
               <span class="link-block">
@@ -137,7 +139,7 @@ Robot-Free Visuo-Tactile Manipulation Interface</title>
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv(coming soon)</span>
                 </a>
               </span>
               <!-- Video Link. -->
@@ -193,8 +195,40 @@ Robot-Free Visuo-Tactile Manipulation Interface</title>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Tactile information plays a crucial role for humans and robots to interact effectively with their environment, particularly for tasks requiring the understanding of contact properties. Solving such dexterous manipulation tasks often relies on imitation learning from demonstration datasets, which are typically collected via teleoperation systems and often demand substantial time and effort. To address these challenges, we present <b>ViTaMIn</b>, an embodiment-free manipulation interface that seamlessly integrates visual and tactile sensing into a hand-held gripper, enabling data collection without the need for teleoperation. Our design employs a compliant Fin Ray gripper with tactile sensing, allowing operators to perceive force feedback during manipulation for more intuitive operation. Additionally, we propose a multimodal representation learning strategy to obtain pre-trained tactile representations, improving data efficiency and policy robustness. Experiments on five contact-rich manipulation tasks demonstrate that <b>ViTaMIn</b> significantly outperforms baseline methods, demonstrating its effectiveness for complex manipulation tasks.
+            In this paper, we present <b>ViTaMIn-B</b>, a portable
+handheld system specifically designed for collecting visuo-tactile
+demonstrations in contact-rich bimanual manipulation tasks.
+While existing handheld data collection devices have made substantial progress, most focus on single-arm operations or lack
+integrated tactile sensing capabilities. To address the growing
+need for bimanual manipulation data, the system introduces
+key improvements: (1) novel compliant tactile sensors with
+high-resolution cameras that can perceive bidirectional contact
+signals and withstand large tangential forces, (2) lightweight
+and ergonomic mechanical design achieved by eliminating
+onboard computing modules and simplifying hardware architecture, reducing operator fatigue during extended data
+collection sessions, and (3) specialized bimanual coordination
+with both hands' poses captured directly within the same
+coordinate system and strict time synchronization across all
+sensing modalities. Comprehensive user studies demonstrate
+efficient operation across different user experience levels, with
+even inexperienced users capable of collecting high-quality data
+with minimal training. We validate the effectiveness of the
+collected multimodal data by training policies on challenging
+bimanual tasks, showing that incorporating tactile feedback
+substantially improves success rates compared to vision-only
+approaches. The results indicate that ViTaMIn-B advances
+portable data collection by providing a more accessible and
+specialized solution for bimanual visuo-tactile demonstration
+collection.
           </p>
+        </div>
+        <div class="12u$">
+          <a href="./static/pdf/ViTaMIn_Learning_Contact_Rich_Tasks_Through_Robot_Free_Visuo_Tactile_Manipulation_Interface.pdf">
+            <span class="image fit" style="border: 1px solid; border-color: #888888;">
+              <img src="static/photos/pdf_image.png" alt="ViTaMIn-B pdf cover">      
+                <!--  undo 随便找的图片 -->
+            </span>
+          </a>
         </div>
       </div>
     </div>
