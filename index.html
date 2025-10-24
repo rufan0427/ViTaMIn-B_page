@@ -54,35 +54,8 @@ Robot-Free Visuo-Tactile Manipulation Interface</title>
     </a>
   </div>
   <!-- <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div> -->
-
-  </div>
+    ...existing code...
+  </div> -->
 </nav>
 
 
@@ -236,6 +209,165 @@ collection.
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Data Collection System</h2>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4  has-text-centered">System Overview</h3>
+        <div class="content">
+          <ul>
+            <li>Utilize the Meta Quest 3 for pose tracking</li>
+            <li>Novel compliant tactile sensors with high-resolution cameras</li>
+            <li>Lightweight and ergonomic mechanical design</li>
+            <li>Specialized bimanual coordination</li>
+          </ul>
+  </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4 has-text-centered">Hardware Design</h3>
+        <p>We maintain the
+ArUco marker-based gripper width detection approach, with
+two markers providing real-time width measurement up to a
+maximum grasping width of 8 cm. </p>
+        <p>However, 
+two key improvements were introduced:  we oriented the GoPro
+camera downward such that the gripper’s working area is
+centered within the camera’s field of view, thereby capturing
+richer visual information. More importantly, we redesigned
+the mechanical structure to achieve a lighter and more
+ergonomic device that enhances usability during extended
+data collection sessions.</p>
+        <br>
+        <span class="image fit" style="border: 1px solid; border-color: #888888;">
+              <img src="static/photos/pdf_image.png" alt="Hardware-Design">      
+                <!--  undo 随便找的图片 -->
+          </span>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4  has-text-centered">Tactile Sensor</h3>
+        <div class="columns">
+          <div class="column is-12">
+            <div class="content">
+              <h4 class="title is-5">Structural Composition</h4>
+              <ul>
+                <li><strong>TPU Frame</strong>: Flexible metamaterial structure for shape adaptation</li>
+                <li><strong>PVC Film</strong>: 2mm transparent film for load protection</li>
+                <li><strong>Contact Layer (Fingertip & Skin)</strong>: Silicone base, reflective coating, black overlay</li>
+                <li><strong>Multi-color LED Array</strong>: Circular RGB configuration for deformation visualization</li>
+                <li><strong>Fingertip Casing</strong>: The mechanical interface connecting the fingertip’s contact layer to the TPU frame</li>
+                <li><strong>RGB Camera</strong>: 640×480 resolution at 30 fps for internal monitoring</li>
+              </ul>
+              <div class="container is-max-desktop">
+                <h2 class="title is-5">Fabrication Process</h2>
+                <div class="content has-text-justified">
+                  <div class="notification is-info is-light">
+                    <p><strong>Manufacturing Technique:</strong> All structural components were produced using additive manufacturing, with TPU frames 3D-printed and other parts created via photocuring resin printing.</p>
+                  </div>
+                  <div class="steps">
+                    <div class="step-item">
+                      <div class="step-content">
+                        <p><strong>Skin Component Preparation</strong></p>
+                        <p>PVC film inserted into mold cavity, transparent silicone adhesive applied around edges, and approximately 10g of degassed transparent silicone gel (Wacker Elastosil RT 601, 9:1 ratio) poured into mold.</p>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="step-item">
+                      <div class="step-content">
+                        <p><strong>Fingertip Component Preparation</strong></p>
+                        <p>LED strip inserted into fingertip casing groove, placed upside down on 30mm hemispherical mold, and degassed transparent silicone gel poured for formation.</p>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="step-item">
+                      <div class="step-content">
+                        <p><strong>Curing Process</strong></p>
+                        <p>Both contact layer configurations cured at 60°C for 30 minutes to achieve optimal material properties.</p>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="step-item">
+                      <div class="step-content">
+                        <p><strong>Reflective Coating Application</strong></p>
+                        <p>Special mixture of Posilicone Translucent silicone (1:1 ratio), white pigment, and silver powder (2:0.1:0.05 ratio) applied as thin uniform layer and cured at 50°C for 20 minutes.</p>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="step-item">
+                      <div class="step-content">
+                        <p><strong>Final Protective Layer</strong></p>
+                        <p>Black paint mixture (Novocs Matte matting agent, Ecollex 00-10, black pigment in 26:6:1 ratio) uniformly airbrushed and cured at 50°C for 20 minutes.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div>
+                <span class="image fit" style="border: 1px solid; border-color: #888888;">
+                  <img src="static/photos/pdf_image.png" alt="Hardware-Design">      
+                  <!--  undo 随便找的图片 -->
+                </span>
+                <p class="is-italic has-text-grey">Fig. 1: Tactile sensor structural composition and working principle</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="container is-max-desktop">
+          <h2 class="title is-5">Sensor Assembly Process</h2>
+          <div class="steps">
+            <div class="step-item">
+                <div class="step-content">
+                <h5 class="title is-6 ">Step 1: Finger Skin Installation</h5>
+                <p>Finger skin component secured by snapping into reserved slots on TPU framework sides. Integrated PVC membrane firmly fixed using six M1.6 screws and corresponding nuts.</p>
+              </div>
+            </div>
+            <br>
+            <div class="step-item">
+                <div class="step-content">
+                <h5 class="title is-6">Step 2: Fingertip and Light Integration</h5>
+                <p>Fingertip component attached to TPU framework top via four mounting holes in connector piece. LED strip light passed through external light strip slots on TPU frame.</p>
+              </div>
+            </div>
+            <br>
+            <div class="step-item">
+                <div class="step-content">
+                <h5 class="title is-6">Step 3: Camera Mounting and Final Assembly</h5>
+                <p>RGB camera mounted to finger bracket using screws and nuts. Fully assembled finger completed by sliding TPU frame into bracket grooves, ensuring precise alignment and secure fit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div>
+          <span class="image fit" style="border: 1px solid; border-color: #888888;">
+            <img src="static/photos/pdf_image.png" alt="Hardware-Design">      
+            <!--  undo 随便找的图片 -->
+          </span>
+          <p class="is-italic has-text-grey">Fig. 1: Tactile sensor structural composition and working principle</p>
+        </div>
+</section>
 
 <!-- Task Demos -->
 <section class="section">
@@ -250,7 +382,7 @@ collection.
       <!-- Task 1 -->
       <div class="column is-6">
         <div class="content has-text-centered">
-          <h3 class="title is-4"> Orange placement</h3>
+          <h3 class="title is-4">Weight Placement</h3>
           <video id="task1" autoplay muted loop playsinline width="100%">
             <source src="./static/videos/orange.mp4" type="video/mp4">
           </video>
@@ -259,7 +391,7 @@ collection.
       <!-- Task 2 -->
       <div class="column is-6">
         <div class="content has-text-centered">
-          <h3 class="title is-4">Test Tube Reorientation</h3>
+          <h3 class="title is-4">Bean Scooping</h3>
           <video id="task2" autoplay muted loop playsinline width="100%">
             <source src="./static/videos/tube.mp4" type="video/mp4">
           </video>
@@ -268,7 +400,7 @@ collection.
       <!-- Task 3 -->
       <div class="column is-6">
         <div class="content has-text-centered">
-          <h3 class="title is-4">Scissor Hanging</h3>
+          <h3 class="title is-4">Cube Storage</h3>
           <video id="task3" autoplay muted loop playsinline width="100%">
             <source src="./static/videos/scissor.mp4" type="video/mp4">
           </video>
@@ -277,47 +409,20 @@ collection.
       <!-- Task 4 -->
       <div class="column is-6">
         <div class="content has-text-centered">
-          <h3 class="title is-4">Sponge Insertion</h3>
+          <h3 class="title is-4">Cup Wiping</h3>
           <video id="task4" autoplay muted loop playsinline width="100%">
             <source src="./static/videos/sponge.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-      <!-- Task 5 -->
-      <div class="column is-6">
-        <div class="content has-text-centered">
-          <h3 class="title is-4">Articulated Object Manipulation</h3>
-          <video id="task5" autoplay muted loop playsinline width="100%">
-            <source src="./static/videos/articulated.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!-- Task 6 -->
-      <div class="column is-6">
-        <div class="content has-text-centered">
-          <h3 class="title is-4">Dynamic Peg Insertion</h3>
-          <video id="task6" autoplay muted loop playsinline width="100%">
-            <source src="./static/videos/dynamic_peg_insertion.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!-- Task 7 -->
-      <div class="column is-6">
-        <div class="content has-text-centered">
-          <h3 class="title is-4">Knife Pulling</h3>
-          <video id="task7" autoplay muted loop playsinline width="100%">
-            <source src="./static/videos/knife.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="content has-text-centered">
+      <!-- Generaliztion -->
+      <div class="container is-max-desktop">
+      <div class="content has-text-centered">
           <h3 class="title is-4">Generalization</h3>
-          <video id="task8" autoplay muted loop playsinline width="100%">
-            <source src="./static/videos/generalization.mp4" type="video/mp4">
-          </video>
+              <video id="Generalization" autoplay muted loop playsinline width="100%">
+                <source src="./static/videos/generalization.mp4" type="video/mp4">
+              </video>
         </div>
-      </div>
     </div>
   </div>
 </section>
@@ -435,6 +540,28 @@ collection.
   </div>
 </section>
 
+<section class="section" id="related_works">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Related Works</h2>
+    <article class="columns">
+      <div class="column is-3">
+        <img src="static/photos/pdf_image.png" alt="coverage photo">
+      </div>
+      <div class="column">
+        <div class="content">
+          <p>
+            <b>Visuo-Tactile Manipulation</b><br>
+                <a href="https://binghao-huang.github.io/">example</a><sup>1</sup>
+            <br>
+            <em>Conference example, 2025</em><br>
+            <a href="https://binghao-huang.github.io/vt_refine/" target="_blank">[<u>Webpage</u>]</a>
+            <a href="https://openreview.net/forum?id=bOVF8Rj33i#discussion" target="_blank">[<u>Paper</u>]</a>
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container">
